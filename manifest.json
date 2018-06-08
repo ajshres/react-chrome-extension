@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "extension-rcr",
+    "description": "React, Chrome and Redux example",
+    "version": "0.0.1",
+    "background": {
+        "scripts": [
+            "event.js"
+        ],
+        "persistent": true
+    },
+    "browser_action":{
+        "default_title":"RCR Example",
+        "default_popup":"popup.html"
+    },
+    "permissions": [
+        "background", "storage","contextMenus"
+    ],
+    "web_accessible_resources":[],
+    "content_scripts": [{
+        "matches": ["*://*/*"],
+        "css": ["content.css"],
+        "js": ["content.js"]
+    }]
+}
